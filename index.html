@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Task Manager</title>
+</head>
+
+<body>
+
+	<div id="app">
+		<header>
+			<h1>Task Manager</h1>
+		</header>
+
+		<div id="taskInputContainer">
+			<input type="text" id="taskInput" placeholder="Add a new task">
+			<button onclick="addTask()">Add Task</button> <!-- добавления задачи с событием onclick, вызывающим функцию addTask() при нажатии. -->
+		</div>
+
+		<div id="filters">
+			<label for="taskFilter">Filter by:</label> <!-- Метка для выпадающего списка фильтра. -->
+			<select id="taskFilter" onchange="filterTasks()">  <!-- Выпадающий список для выбора фильтра, с событием onchange, вызывающим функцию filterTasks() при изменении. -->
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+            <option value="deleted">Deleted</option>
+        </select>
+		</div>
+
+		<ul id="taskList">
+			<!-- Сюда будут добавлены дела -->
+		</ul>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

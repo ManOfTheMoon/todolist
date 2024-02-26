@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('font.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#app {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #007BFF;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+footer {
+    background-color: #007BFF;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    margin-top: 20px;
+}
+
+#taskInputContainer {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskInput {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#taskInput:focus { <!-- Стили для активного (в фокусе) состояния поля ввода. -->
+    outline: none;
+    border-color: #007BFF;
+}
+
+#taskInputContainer button {
+    width: 30%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#taskInputContainer button:hover { <!-- Стили для состояния наведения курсора на кнопку. -->
+    background-color: #0056b3;
+}
+
+#filters {
+    margin-top: 20px;
+}
+
+#filters label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#taskFilter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#taskList {
+    list-style: none; <!-- Убирает стандартные маркеры списка -->
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #fff;
+    transition: background-color 0.3s ease; <!-- устанавливает анимацию изменения цвета фона для элемента. При изменении цвета, анимация длится 0.3 секунды и имеет плавный эффект (ease). -->
+}
+
+.task:hover {
+    background-color: #f0f0f0;
+}
+
+.task span {
+    flex: 1;
+}
+
+.task button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task button:hover {
+    opacity: 0.8;
+}
+
+.completed {
+    text-decoration: none;
+    color: #28a745;
+}
+
+.completed span::before {
+    content: '\2714';
+    margin-right: 5px;
+    color: #28a745;
+}
+
+.deleted {
+    color: #999;
+}
+
+.deleted span::before {
+    content: '\2718';
+    margin-right: 5px;
+    color: #999;
+}
